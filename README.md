@@ -2,6 +2,8 @@
 
 A server side mod providing X-Ray view for the [Minetest](https://www.minetest.net/) game engine.
 
+Some screenshots can be found [here](https://github.com/shasait/minetest-mod-xray/issues/1).
+
 ## Getting started
 
 * Download as ZIP and extract into mods folder. See [Wiki](https://dev.minetest.net/Installing_Mods) for details.
