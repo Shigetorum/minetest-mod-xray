@@ -4,6 +4,9 @@ xray = {}
 -- View range
 xray.vrange = 5
 
+-- Default opacity
+xray.opacity = 150
+
 -- Table: orig_type_name = xray_type_name
 xray.nodes = {}
 
@@ -13,10 +16,11 @@ minetest.register_node("xray:stone", {
 	description = "X-Ray Stone",
 	drawtype = "glasslike",
 	use_texture_alpha = true,
-	tiles = { "xray_stone.png" },
+	tiles = { "default_stone.png^[opacity:" .. xray.opacity },
 	groups = { cracky = 3, stone = 1 },
 	drop = 'default:cobble',
 	sounds = default.node_sound_stone_defaults(),
+	paramtype = "light",
 	legacy_mineral = true,
 })
 
@@ -25,10 +29,11 @@ minetest.register_node("xray:stonebrick", {
 	description = "X-Ray Stone Brick",
 	drawtype = "glasslike",
 	use_texture_alpha = true,
-	tiles = { "xray_stone_brick.png" },
+	tiles = { "default_stone_brick.png^[opacity:" .. xray.opacity },
 	groups = { cracky = 2, stone = 1 },
 	drop = 'default:stonebrick',
 	sounds = default.node_sound_stone_defaults(),
+	paramtype = "light",
 	paramtype2 = "facedir",
 	place_param2 = 0,
 	is_ground_content = false,
